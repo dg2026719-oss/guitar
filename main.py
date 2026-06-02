@@ -1,4 +1,5 @@
 Web VPython 3.2
+Web VPython 3.2
 
 cylinder(pos = vec(0,0,0), opacity = 1, size = vec(10,25,29), color = vector(0.82, 0.68, 0.45))
 cylinder(pos = vec(0,15.7,0), opacity = 1, size = vec(10,16,21), color = vector(0.82, 0.68, 0.45))
@@ -12,8 +13,20 @@ sphere(pos = vec(-0.3, 0.1, 0.35), opacity = 1, size = vec(0.4,0.4,0.4), color =
 sphere(pos = vec(-0.3, 0.1, -0.35), opacity = 1, size = vec(0.4,0.4,0.4), color = vector(0.99,0.96,0.9))
 sphere(pos = vec(-0.3, 0.1, 1.1), opacity = 1, size = vec(0.4,0.4,0.4), color = vector(0.99,0.96,0.9))
 sphere(pos = vec(-0.3, 0.1, -1.1), opacity = 1, size = vec(0.4,0.4,0.4), color = vector(0.99,0.96,0.9))
-cylinder(pos = vec(-0.5,0,1.8), opacity = 1, size = vec(42,0.1,0.15), color = vector(0.9,0.9,0.9), axis = vec(0,30,0))
-cylinder(pos = vec(-0.5,0,-1.8), opacity = 1, size = vec(42,0.1,0.15), color = vector(0.92,0.76,0.53), axis = vec(0,30,0))
+b = cylinder(pos = vec(-0.5,0,1.8), opacity = 1, size = vec(42,0.1,0.15), axis = vec(0,30,0))
+while True : 
+    rate(100)
+    k = keysdown()
+    if '1' in k :
+        b.color = color.red
+    else :
+        b.color = vector(0.9,0.9,0.9)
+    if '2' in k :
+        a.color = color.red
+    else :
+        a.color = vector(0.92,0.76,0.53)
+a = cylinder(pos = vec(-0.5,0,-1.8), opacity = 1, size = vec(42,0.1,0.15), axis = vec(0,30,0))
+
 cylinder(pos = vec(-0.5,0,0.35), opacity = 1, size = vec(42,0.1,0.15), color = vector(0.92,0.76,0.53), axis = vec(0,30,0))
 cylinder(pos = vec(-0.5,0,-0.35), opacity = 1, size = vec(42,0.1,0.15), color = vector(0.92,0.76,0.53), axis = vec(0,30,0))
 cylinder(pos = vec(-0.5,0,1.1), opacity = 1, size = vec(42,0.1,0.15), color = vector(0.9,0.9,0.9), axis = vec(0,30,0))
@@ -26,4 +39,3 @@ cylinder(pos = vec(-1.3,47.65,1.7), opacity = 1, size = vec(2,0.9,0.9), color = 
 cylinder(pos = vec(-1.3,47.65,-1.7), opacity = 1, size = vec(2,0.9,0.9), color = vector(0.74,0.76,0.78))
 cylinder(pos = vec(-1.3,45.5,1.7), opacity = 1, size = vec(2,0.9,0.9), color = vector(0.74,0.76,0.78))
 cylinder(pos = vec(-1.3,45.5,-1.7), opacity = 1, size = vec(2,0.9,0.9), color = vector(0.74,0.76,0.78))
-cylinder( pos=vec(-1, 40, 4), axis=vec(0, 0, -0.5), radius=0.1,color=color.gray(0.7))
